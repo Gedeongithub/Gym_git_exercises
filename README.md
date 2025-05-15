@@ -44,4 +44,193 @@ $ git branch -m main master
 
 Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
 $
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git add .
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git push
+fatal: The current branch dev has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin dev
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git push --set-upstream origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/Gedeongithub/Gym_git_exercises/pull/new/dev
+remote:
+To https://github.com/Gedeongithub/Gym_git_exercises.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git push
+Everything up-to-date
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git checkout -b test
+Switched to a new branch 'test'
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git push
+fatal: The current branch test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git push --set- upstream origin test
+error: src refspec origin does not match any
+error: failed to push some refs to 'upstream'
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git add -all
+error: did you mean `--all` (with two dashes)?
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git add -All
+error: unknown switch `l'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --[no-]dry-run    dry run
+    -v, --[no-]verbose    be verbose
+
+    -i, --[no-]interactive
+                          interactive picking
+    -p, --[no-]patch      select hunks interactively
+    -e, --[no-]edit       edit current diff and apply
+    -f, --[no-]force      allow adding otherwise ignored files
+    -u, --[no-]update     update tracked files
+    --[no-]renormalize    renormalize EOL of tracked files (implies -u)
+    -N, --[no-]intent-to-add
+                          record only the fact that the path will be added later
+    -A, --[no-]all        add changes from all tracked and untracked files
+    --[no-]ignore-removal ignore paths removed in the working tree (same as --no-all)
+    --[no-]refresh        don't add, only refresh the index
+    --[no-]ignore-errors  just skip files which cannot be added because of errors
+    --[no-]ignore-missing check if - even missing - files are ignored in dry run
+    --[no-]sparse         allow updating entries outside of the sparse-checkout cone
+    --[no-]chmod (+|-)x   override the executable bit of the listed files
+    --[no-]pathspec-from-file <file>
+                          read pathspec from file
+    --[no-]pathspec-file-nul
+                          with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git add .
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git push
+fatal: The current branch test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git push --set-upstream origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/Gedeongithub/Gym_git_exercises/pull/new/test
+remote:
+To https://github.com/Gedeongithub/Gym_git_exercises.git
+ * [new branch]      test -> test
+branch 'test' set up to track 'origin/test'.
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
+$ git switch dev
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git branch -D test
+Deleted branch test (was 08eb802).
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git push --origin delete test
+error: unknown option `origin'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]repo <repository>
+                          repository
+    --[no-]all            push all branches
+    --[no-]branches       alias of --all
+    --[no-]mirror         mirror all refs
+    -d, --[no-]delete     delete refs
+    --[no-]tags           push tags (can't be used with --all or --branches or --mirror)
+    -n, --[no-]dry-run    dry run
+    --[no-]porcelain      machine-readable output
+    -f, --[no-]force      force updates
+    --[no-]force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --[no-]force-if-includes
+                          require remote updates to be integrated locally
+    --[no-]recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --[no-]thin           use thin pack
+    --[no-]receive-pack <receive-pack>
+                          receive pack program
+    --[no-]exec <receive-pack>
+                          receive pack program
+    -u, --[no-]set-upstream
+                          set upstream for git pull/status
+    --[no-]progress       force progress reporting
+    --[no-]prune          prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --verify              opposite of --no-verify
+    --[no-]follow-tags    push missing but relevant tags
+    --[no-]signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --[no-]atomic         request atomic transaction on remote side
+    -o, --[no-]push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$ git push origin --delete test
+To https://github.com/Gedeongithub/Gym_git_exercises.git
+ - [deleted]         test
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+$
 ```
