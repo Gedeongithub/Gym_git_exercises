@@ -399,3 +399,152 @@ about.html  home.html  README.md
 Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
 $
 ```
+## Bundle 2
+### Exercise 2
+
+```bash
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/bundle-2)
+$ git branch
+  dev
+* ft/bundle-2
+  master
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/bundle-2)
+$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git pull
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 3.41 KiB | 174.00 KiB/s, done.
+From https://github.com/Gedeongithub/Gym_git_exercises
+   547ff54..fca26f5  master     -> origin/master
+   9756f56..51b8c4c  dev        -> origin/dev
+Updating 547ff54..fca26f5
+Fast-forward
+ README.md    | 165 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html   |  11 ++++
+ home.html    |  12 +++++
+ service.html |  11 ++++
+ 4 files changed, 199 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 service.html
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   service.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git add .
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   service.html
+        new file:   team.html
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git reset HEAD team.html
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   service.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   service.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   service.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git add service.html 
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   service.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git commit -m"ft: Added the list of the new service"
+[ft/service-redesign b87e774] ft: Added the list of the new service
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 504 bytes | 504.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Gedeongithub/Gym_git_exercises/pull/new/ft/service-redesign
+remote:
+To https://github.com/Gedeongithub/Gym_git_exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$
+```
