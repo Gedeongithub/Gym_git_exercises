@@ -547,4 +547,93 @@ branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 
 Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
 $
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git diff --staged
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git diff --staged
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git diff
+diff --git a/service.html b/service.html
+index ad0980a..e7580cb 100644
+--- a/service.html
++++ b/service.html
+@@ -19,6 +19,7 @@
+         <li>Second service</li>
+         <li>Third service</li>
+         <li>Fourth service</li>
++        <li>Fith service</li>
+     </ol>
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git diff --cached
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git add service.html 
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   service.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git diff --staged
+diff --git a/service.html b/service.html
+index ad0980a..e7580cb 100644
+--- a/service.html
++++ b/service.html
+@@ -19,6 +19,7 @@
+         <li>Second service</li>
+         <li>Third service</li>
+         <li>Fourth service</li>
++        <li>Fith service</li>
+     </ol>
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git diff
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git log --oneline
+41b36ea (HEAD -> ft/service-redesign) ft:added a new old service
+2c4dfc6 (origin/ft/service-redesign) ft: old services
+e95149b (origin/master, master) ft: Added old services
+484df3e ft: Added the list of the new service
+b87e774 ft: Added the list of the new service
+fca26f5 Merge pull request #3 from Gedeongithub/ft/bundle-2
+4f56495 Merge pull request #2 from Gedeongithub/dev
+5e3f8e6 (origin/ft/bundle-2, ft/bundle-2) create a services page
+9756f56 (dev) The setup of home and about page
+547ff54 added the creation of dev and test as well as deleting both test locally and remotely
+08eb802 first commit
+3ed949d my initial git
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$ git diff 41b36ea 2c4dfc6
+diff --git a/service.html b/service.html
+index ad0980a..7006940 100644
+--- a/service.html
++++ b/service.html
+@@ -18,7 +18,6 @@
+         <li>First service</li>
+         <li>Second service</li>
+         <li>Third service</li>
+-        <li>Fourth service</li>
+     </ol>
+ </body>
+ </html>
+\ No newline at end of file
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/service-redesign)
+$
 ```
