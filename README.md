@@ -1,401 +1,207 @@
 # Git exercise
 
-## Bundle 1
+## Bundle 3
 
-### Exercise 1
-
-```bash
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git status
-On branch main
-
-No commits yet
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        README.md
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git log
-fatal: your current branch 'main' does not have any commits yet
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git branch
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git remote
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git remote
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git remote
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git stash
-You do not have the initial commit yet
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (main)
-$ git branch -m main master
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
-$
-
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
-$ git checkout -b dev
-Switched to a new branch 'dev'
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git status
-On branch dev
-nothing to commit, working tree clean
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git add .
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git status
-On branch dev
-nothing to commit, working tree clean
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git push
-fatal: The current branch dev has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin dev
-
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
-
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git push --set-upstream origin dev
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: 
-remote: Create a pull request for 'dev' on GitHub by visiting:
-remote:      https://github.com/Gedeongithub/Gym_git_exercises/pull/new/dev
-remote:
-To https://github.com/Gedeongithub/Gym_git_exercises.git
- * [new branch]      dev -> dev
-branch 'dev' set up to track 'origin/dev'.
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git push
-Everything up-to-date
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git checkout -b test
-Switched to a new branch 'test'
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git push
-fatal: The current branch test has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin test
-
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
-
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git push --set- upstream origin test
-error: src refspec origin does not match any
-error: failed to push some refs to 'upstream'
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git add -all
-error: did you mean `--all` (with two dashes)?
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git add -All
-error: unknown switch `l'
-usage: git add [<options>] [--] <pathspec>...
-
-    -n, --[no-]dry-run    dry run
-    -v, --[no-]verbose    be verbose
-
-    -i, --[no-]interactive
-                          interactive picking
-    -p, --[no-]patch      select hunks interactively
-    -e, --[no-]edit       edit current diff and apply
-    -f, --[no-]force      allow adding otherwise ignored files
-    -u, --[no-]update     update tracked files
-    --[no-]renormalize    renormalize EOL of tracked files (implies -u)
-    -N, --[no-]intent-to-add
-                          record only the fact that the path will be added later
-    -A, --[no-]all        add changes from all tracked and untracked files
-    --[no-]ignore-removal ignore paths removed in the working tree (same as --no-all)
-    --[no-]refresh        don't add, only refresh the index
-    --[no-]ignore-errors  just skip files which cannot be added because of errors
-    --[no-]ignore-missing check if - even missing - files are ignored in dry run
-    --[no-]sparse         allow updating entries outside of the sparse-checkout cone
-    --[no-]chmod (+|-)x   override the executable bit of the listed files
-    --[no-]pathspec-from-file <file>
-                          read pathspec from file
-    --[no-]pathspec-file-nul
-                          with --pathspec-from-file, pathspec elements are separated with NUL character
-
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git add .
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git status
-On branch test
-nothing to commit, working tree clean
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git push
-fatal: The current branch test has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin test
-
-To have this happen automatically for branches without a tracking
-upstream, see 'push.autoSetupRemote' in 'git help config'.
-
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git push --set-upstream origin test
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: 
-remote: Create a pull request for 'test' on GitHub by visiting:
-remote:      https://github.com/Gedeongithub/Gym_git_exercises/pull/new/test
-remote:
-To https://github.com/Gedeongithub/Gym_git_exercises.git
- * [new branch]      test -> test
-branch 'test' set up to track 'origin/test'.
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (test)
-$ git switch dev
-Switched to branch 'dev'
-Your branch is up to date with 'origin/dev'.
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git branch -D test
-Deleted branch test (was 08eb802).
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git push --origin delete test
-error: unknown option `origin'
-usage: git push [<options>] [<repository> [<refspec>...]]
-
-    -v, --[no-]verbose    be more verbose
-    -q, --[no-]quiet      be more quiet
-    --[no-]repo <repository>
-                          repository
-    --[no-]all            push all branches
-    --[no-]branches       alias of --all
-    --[no-]mirror         mirror all refs
-    -d, --[no-]delete     delete refs
-    --[no-]tags           push tags (can't be used with --all or --branches or --mirror)
-    -n, --[no-]dry-run    dry run
-    --[no-]porcelain      machine-readable output
-    -f, --[no-]force      force updates
-    --[no-]force-with-lease[=<refname>:<expect>]
-                          require old value of ref to be at this value
-    --[no-]force-if-includes
-                          require remote updates to be integrated locally
-    --[no-]recurse-submodules (check|on-demand|no)
-                          control recursive pushing of submodules
-    --[no-]thin           use thin pack
-    --[no-]receive-pack <receive-pack>
-                          receive pack program
-    --[no-]exec <receive-pack>
-                          receive pack program
-    -u, --[no-]set-upstream
-                          set upstream for git pull/status
-    --[no-]progress       force progress reporting
-    --[no-]prune          prune locally removed refs
-    --no-verify           bypass pre-push hook
-    --verify              opposite of --no-verify
-    --[no-]follow-tags    push missing but relevant tags
-    --[no-]signed[=(yes|no|if-asked)]
-                          GPG sign the push
-    --[no-]atomic         request atomic transaction on remote side
-    -o, --[no-]push-option <server-specific>
-                          option to transmit
-    -4, --ipv4            use IPv4 addresses only
-    -6, --ipv6            use IPv6 addresses only
-
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git push origin --delete test
-To https://github.com/Gedeongithub/Gym_git_exercises.git
- - [deleted]         test
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$
-```
 ### Exercise 2
 
 ```bash
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ touch home.html
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git switch master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
 $ git status
-On branch dev
-Your branch is up to date with 'origin/dev'.
+On branch master
+Your branch is up to date with 'origin/master'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        home.html
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   service.html
 
-nothing added to commit but untracked files present (use "git add" to track)
+no changes added to commit (use "git add" and/or "git commit -a")
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash
-No local changes to save
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash list
+The most similar command is
+        add
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git add .
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
 $ git status
-On branch dev
-Your branch is up to date with 'origin/dev'.
+On branch master
+Your branch is up to date with 'origin/master'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        home.html
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   service.html
 
-nothing added to commit but untracked files present (use "git add" to track)
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ ls
-home.html  README.md
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git commit -m"feat: Added home page contents"
+[master 7cf85c9] feat: Added home page contents
+ 1 file changed, 3 insertions(+)
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/faq-page
+  ft/home-page-redesign
+  ft/service-redesign
+  ft/team-page
+* master
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (master)
+$ git switch ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git log
+commit 134b75ec2bc7b1c4c75e4453956845deda66032a (HEAD -> ft/home-page-redesign, origin/ft/faq-page, ft/faq-page)
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:56:45 2025 +0200
+
+    feat: Added faq page
+
+commit 4f4468fd4c9020a9c31d8277132efe3b61263af7
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:46:16 2025 +0200
+
+    feat: added faq page
+
+commit 20810d6e7a5d673f35c2f60b429d0ca7ea45116c
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:24:14 2025 +0200
+
+    feat: added faq-page
+
+commit c2811517fd85d0dff8bfe0c1f24325f14700e1a7 (origin/ft/contact-page, ft/contact-page)
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:09:00 2025 +0200
+
+    ft:added contact us
+
+commit e95149b0dd283338281dd928768e8f20c06fec24 (origin/master)
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 11:05:58 2025 +0200
+
+    ft: Added old services
+
+commit fca26f55b0b136bce9f8b7f0dbc3b6755b177f43
+Merge: 4f56495 5e3f8e6
+Author: Gedeon DUFITIMANA <123157177+Gedeongithub@users.noreply.github.com>
+Date:   Wed May 21 10:05:21 2025 +0200
+
+    Merge pull request #3 from Gedeongithub/ft/bundle-2
+
+    Add a new html page to a project
+
+commit 4f564950d9325483a4891fac62979a8ac8fddefc
+Merge: 547ff54 9756f56
+Author: Gedeon DUFITIMANA <123157177+Gedeongithub@users.noreply.github.com>
+Date:   Wed May 21 10:04:55 2025 +0200
+
+    Merge pull request #2 from Gedeongithub/dev
+
+    The setup of home and about page
+
+commit 5e3f8e668b0f875e460aa4213bf88b70f6eaa139 (origin/ft/bundle-2, ft/bundle-2)
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git rebase master
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git log
+commit ae94bc416e888bdb200d71e3195ed63c2abc1ecf (HEAD -> ft/home-page-redesign)
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:56:45 2025 +0200
+
+    feat: Added faq page
+
+commit 3c85b14e3da7eaa372b0f9830da153f8859d101d
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:46:16 2025 +0200
+
+    feat: added faq page
+
+commit 1cee1b8f8ee2dbeac52df17ed7fcdf41408539f6
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:24:14 2025 +0200
+
+    feat: added faq-page
+
+commit 34c05463b30cdd290ce32589f7505229b4aec14a
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Wed May 21 17:09:00 2025 +0200
+
+    ft:added contact us
+
+commit 7cf85c97690644be32aceb9c08ff99400a571dac (master)
+Author: Gedeon DUFITIMANA <gedeon.dufitimana2023@kepler.org>
+Date:   Thu May 22 10:35:50 2025 +0200
+
+    feat: Added home page contents
+
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
 $ git add home.html 
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git status
-On branch dev
-Your branch is up to date with 'origin/dev'.
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git commit -m"feat: Added menus on the homepage"
+[ft/home-page-redesign 4b477a9] feat: Added menus on the homepage
+ 1 file changed, 5 insertions(+)
 
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   home.html
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
 
+    git push --set-upstream origin ft/home-page-redesign
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash
-Saved working directory and index state WIP on dev: 08eb802 first commit
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash list
-stash@{0}: WIP on dev: 08eb802 first commit
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ ls
-README.md
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ touch about.html
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ ls
-about.html  README.md
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git add about.html 
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git status
-On branch dev
-Your branch is up to date with 'origin/dev'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   about.html
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
 
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash
-Saved working directory and index state WIP on dev: 08eb802 first commit
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (19/19), 5.04 KiB | 224.00 KiB/s, done.
+Total 19 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Gedeongithub/Gym_git_exercises/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/Gedeongithub/Gym_git_exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash list
-stash@{0}: WIP on dev: 08eb802 first commit
-stash@{1}: WIP on dev: 08eb802 first commit
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ touch team.html
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git status
-On branch dev
-Your branch is up to date with 'origin/dev'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        team.html
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git add team.html 
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git status
-On branch dev
-Your branch is up to date with 'origin/dev'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   team.html
-
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash
-Saved working directory and index state WIP on dev: 08eb802 first commit
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash list
-stash@{0}: WIP on dev: 08eb802 first commit
-stash@{1}: WIP on dev: 08eb802 first commit
-stash@{2}: WIP on dev: 08eb802 first commit
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash pop stash@{1}
-On branch dev
-Your branch is up to date with 'origin/dev'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   about.html
-
-Dropped stash@{1} (db2e9d13bf936d29391c7919ccf7868ee6cdbf1e)
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash list
-stash@{0}: WIP on dev: 08eb802 first commit
-stash@{1}: WIP on dev: 08eb802 first commit
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ git stash pop stash@{1}
-On branch dev
-Your branch is up to date with 'origin/dev'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   about.html
-        new file:   home.html
-
-Dropped stash@{1} (e53b06c9cb2386a775539e9f6dd24d4d8b06b2c3)
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
-$ ls
-about.html  home.html  README.md
-
-Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (dev)
+Administrator@DESKTOP-5O3LLQR MINGW64 /e/Gym Git Exercise Solutions (ft/home-page-redesign)
 $
 ```
